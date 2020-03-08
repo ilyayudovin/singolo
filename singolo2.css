@@ -10,6 +10,11 @@ body{
     width: 1020px;
     margin:0 auto;
 }
+.wrapper{
+    width: 940px;
+    height: 790px;
+    padding: 40px;
+}
 main{
     width: 1020px;
     height: 864px;
@@ -17,11 +22,7 @@ main{
     position: relative;
     overflow: hidden;
 }
-.wrapper{
-    width: 940px;
-    height: 790px;
-    padding: 40px;
-}
+
 .text-section{
     margin-top: 22px;
 }
@@ -75,7 +76,7 @@ main .text-section p {
     height: 600px;
     overflow: hidden;
 }
-footer{
+.footer{
     width: 1020px;
     height: 728px;
     background-color: #f2f2f2;
