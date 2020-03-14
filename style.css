@@ -3,10 +3,14 @@
     padding: 0;
 }
 body{
-    width: 1020px;
-    margin: 0 auto;
+    /*width: 1020px;*/
+    /*margin: 0 auto;*/
     font-family: 'Lato', sans-serif;
 
+}
+.aligner{
+    width: 1020px;
+    margin: 0 auto;
 }
 header{
     width: 100%;
@@ -47,9 +51,11 @@ header{
     font-weight: 700;
     cursor: pointer;
 }
-.header_content nav ul li:hover {
+.header_content nav ul li a:hover {
     color: rgb(240,108,100);
+    cursor: pointer;
 }
+
 .header_content ul li:not(:first-child)::before {
     content: ".";
     position: relative;
@@ -61,12 +67,7 @@ header{
     color: rgb(63,67,83);
 }
 /**/
-section{
-    width: 100%;
-    height: 594px;
-    background-color: rgb(240,108,100);
-    position: relative;
-}
+
 .section-bottom{
     width: 1020px;
     height: 6px;
@@ -76,12 +77,14 @@ section{
     position: absolute;
     top: 278px;
     transform: rotate(180deg);
-    left: 2px;
+    left: 20px;
+    z-index: 100;
 }
 .right-arrow{
     position: absolute;
     top: 280px;
-    right: 0;
+    right: 20px;
+    z-index: 100;
 }
 .arrow:hover{
     opacity: .7;
@@ -167,7 +170,7 @@ section{
     font-weight: 400;
     padding-top: 7px;
 }
-main{
+.portfolio{
     width: 1020px;
     height: 864px;
     background-color: #2d303a;
@@ -178,7 +181,7 @@ main{
 .text-section{
     margin-top: 22px;
 }
-main .text-section h2{
+.portfolio .text-section h2{
     letter-spacing: -0.1px;
     color: #666d89;
     font-family: "Lato-Black" , sans-serif;
@@ -187,7 +190,7 @@ main .text-section h2{
     padding-top: 40px;
 
 }
-main .text-section p {
+.portfolio .text-section p {
     color: #767e9e;
     letter-spacing: 0.52px;
     font-family: "Lato", sans-serif;
@@ -230,7 +233,7 @@ main .text-section p {
     height: 600px;
     overflow: hidden;
 }
-.footer{
+.aboutus{
     width: 1020px;
     height: 728px;
     background-color: #f2f2f2;
@@ -280,13 +283,16 @@ main .text-section p {
     margin-top: 12px;
     color: #666d89;
     letter-spacing: -0.11px;
+    width: 100%;
+    overflow: hidden;
+    height: 20px;
 }
 .people-info .person p {
     color: #767e9e;
     font-family: Lato;
     font-size: 12px;
     line-height: 21.56px;
-    padding-top: 8px;
+    padding-top: 9px;
     text-align: justify;
 }
 .wrapper2{
@@ -326,7 +332,7 @@ main .text-section p {
     height: 6px;
     background-color: #ffffff;
 }
-.mainer{
+.quote{
     width: 1020px;
     height: 648px;
     background-color: #f06c64;
@@ -341,21 +347,21 @@ main .text-section p {
     src: url('assets/Lato-Black.ttf');
     font-family: Lato-Black;
 }
-.mainer .wrapper .text-section div:first-child{
+.quote .wrapper .text-section div:first-child{
     margin-top: 29px;
     letter-spacing: -0.2px;
 }
-.mainer .wrapper .text-section h1 {
+.quote .wrapper .text-section h1 {
     height: 26px;
     color: #f0d8d9;
     font-family: "Lato-Black",sans-serif;
     font-size: 30px;
     line-height: 17.86px;
 }
-.mainer .wrapper .text-section div:last-child{
+.quote .wrapper .text-section div:last-child{
     margin-top: 19px;
 }
-.mainer .wrapper .text-section p{
+.quote .wrapper .text-section p{
     color: #f0d8d9;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
@@ -364,7 +370,7 @@ main .text-section p {
     text-align: justify;
     letter-spacing: -0.22px;
 }
-.mainer input:focus{
+.quote input:focus{
     border:none;
 }
 .namefield:required:valid,
@@ -381,7 +387,7 @@ main .text-section p {
 .wrapper3{
     padding-top: 40px;
 }
-.mainer form input {
+.quote form input {
     width: 619px;
     height: 38px;
     background-color: #d6564f;
@@ -397,7 +403,7 @@ form input::placeholder{
     line-height: 21.56px;
     padding-left: 15px;
 }
-.mainer form textarea{
+.quote form textarea{
     width: 619px;
     height: 202px;
     background-color: #d6564f;
@@ -412,6 +418,10 @@ form textarea::placeholder{
     line-height: 21.56px;
     padding-top: 7px;
     padding-left: 14px;
+}
+form input , form textarea {
+    outline: none;
+    padding-left: 15px;
 }
 .input-section{
     max-width: 619px;
@@ -472,14 +482,14 @@ a {
     padding-top: 5px;
     margin-right: 11px;
 }
-button{
+.submitbtn{
     border: none;
     width: 100px;
     line-height: 27px;
     margin-top: 10px;
     border-radius: 3px;
 }
-button:hover{
+.submitbtn:hover{
     background-color: lightgrey;
 }
 footer{
@@ -520,4 +530,121 @@ footer{
     position: absolute;
     top: 28px;
     left: 42px;
+}
+.copyright-text{
+    font-size: 11px;
+    color: #767e9e;
+    padding-top: 2px;
+    padding-left: 0px;
+    letter-spacing: 0.27px;
+}
+
+/*js*/
+.active-li{
+    color: rgb(240,108,100);
+}
+.clicked-pic{
+    border: 5px solid #F06C64;
+    width: 210px;
+    height: 177px;
+}
+.clicked-tab{
+    color: #f2f2f2;
+    box-shadow: 0 0 4px 1px white;
+}
+.pop-window{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #0008;
+}
+.message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: whitesmoke;
+    width: 250px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+    /*display: none;*/
+}
+.message p {
+    padding-top: 20px;
+}
+.okbtn{
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+}
+.phones{
+    width: 100%;
+    height: 594px;
+    position: relative;
+    overflow:hidden;
+}
+.slide-1{
+    width: 100%;
+    height: 594px;
+    background-color: rgb(240,108,100);
+    position: absolute;
+    /*transition-duration: 2s;*/
+}
+.slide-1 .wrapper img{
+    background-color: rgb(240,108,100);
+}
+.slide-2{
+    width: 100%;
+    height: 594px;
+    position: absolute;
+    /*transition-duration: 2s;*/
+}
+.slide{
+    transition: 0.6s ease;
+    transform: translate(-100%, 0);
+}
+.slide.active{
+    transform: translate(0, 0);
+}
+.slide.active ~ .slide{
+    transform: translate(100%, 0);
+}
+.phone-click{
+    width: 216px;
+    height: 457px;
+    position: absolute;
+    padding-left: 0px;
+    margin-top: 71px;
+}
+.phone-click2{
+    position: absolute;
+    width: 457px;
+    height: 216px;
+    margin-left: 65px;
+    margin-top: 105px;
+}
+.black-screen{
+    width: 189px;
+    margin-left: 15px;
+    height: 334px;
+    margin-top: 64px;
+    background-color: black;
+    display: none;
+}
+.black-screen2{
+    position: absolute;
+    height: 189px;
+    width: 334px;
+    margin-left: 60px;
+    margin-top: 14px;
+    background-color: black;
+    display: none;
+}
+.message{
+    padding: 20px;
+}
+.message p {
+    word-break: break-all;
 }
