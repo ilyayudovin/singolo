@@ -77,14 +77,14 @@ header{
 }
 .left-arrow{
     position: absolute;
-    top: 278px;
+    top: 348px;
     transform: rotate(180deg);
     left: 20px;
     z-index: 100;
 }
 .right-arrow{
     position: absolute;
-    top: 280px;
+    top: 350px;
     right: 20px;
     z-index: 100;
 }

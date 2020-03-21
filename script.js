@@ -17,6 +17,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.addEventListener('scroll',onScroll);
+function onScroll(event) {
+    const curPos = pageYOffset;
+    console.log(curPos);
+    const links = document.querySelectorAll('#section-list a');
+    const sections = document.querySelectorAll('#aligner>section');
+
+    sections.forEach((el)=>{
+        if((el.offsetTop-89) <= curPos && (el.offsetTop-89 + el.offsetHeight) > curPos){
+            links.forEach((a)=>{
+                a.classList.remove('active-li');
+                if(el.getAttribute('id') === a.getAttribute('href').substring(1)){
+                    a.classList.add('active-li');
+                }
+            })
+        }
+    });
+}
+
 const Gallery = document.getElementById('gallery');
 Gallery.addEventListener('click',(event)=>{
     Gallery.querySelectorAll('img').forEach(el => el.classList.remove('clicked-pic'));
