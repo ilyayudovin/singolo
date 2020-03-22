@@ -16,7 +16,7 @@ header{
     width: 1020px;
     position: fixed;
     z-index: 101;
-    height: 97px;
+    height: 98px;
     background-color: #2d303a;
     color: white;
 }
@@ -29,7 +29,7 @@ header{
     line-height: 20px;
 }
 .header-bottom{
-    width: 1020px;
+    width: 100%;
     height: 6px;
     background-color: #323746;
 }
@@ -37,7 +37,7 @@ header{
     width: 940px;
     height: 30%;
     margin: 0 auto;
-    padding: 34px 40px;
+    padding: 30px 40px;
 }
 .header_content p,nav{
     display: inline-block;
@@ -71,7 +71,7 @@ header{
 /**/
 
 .section-bottom{
-    width: 1020px;
+    width: 100%;
     height: 6px;
     background-color: #ea676b;
 }
@@ -108,6 +108,7 @@ header{
 .service-block{
     width: 100%;
     height: 493px;
+    position: relative;
     background-color: #f2f2f2;
 }
 .wrapper{
@@ -116,8 +117,10 @@ header{
     position: relative;
 }
 .footer-bottom{
-    width: 1020px;
+    width: 100%;
     height: 6px;
+    bottom: 0;
+    position: absolute;
     background-color: #ffffff;
 }
 .service_upperpart{
@@ -238,6 +241,7 @@ header{
 .aboutus{
     width: 1020px;
     height: 728px;
+    position: relative;
     background-color: #f2f2f2;
 }
 .footer-text-section h1{
@@ -266,8 +270,10 @@ header{
     margin-bottom: 16px;
 }
 .main-bottom-line{
-    width: 1020px;
+    width: 100%;
     height: 6px;
+    position: absolute;
+    bottom: 0;
     background-color: #323746;
 }
 .people-info{
@@ -330,8 +336,10 @@ header{
     transform: translateX(-50%) translateY(-50%);
 }
 .footer-bottom-line{
-    width: 1020px;
+    width: 100%;
     height: 6px;
+    position: absolute;
+    bottom: 0;
     background-color: #ffffff;
 }
 .quote{
@@ -341,8 +349,10 @@ header{
     position: relative;
 }
 .bottom-main-line{
-    width: 1020px;
+    width: 100%;
     height: 6px;
+    position: absolute;
+    bottom: 0;
     background-color: #ea676b;
 }
 @font-face{
@@ -496,7 +506,8 @@ a {
 }
 footer{
     position: relative;
-    width: 1020px;
+    min-width: 320px;
+    width: 100%;
     height: 76px;
     background-color: #2d303a;
 }
@@ -583,7 +594,7 @@ footer{
 }
 .phones{
     width: 100%;
-    height: 594px;
+    height: 593px;
     padding-top: 89px;
     position: relative;
     overflow:hidden;
@@ -650,4 +661,67 @@ footer{
 }
 .message p {
     word-break: break-all;
+}
+/**/
+@media screen and (max-width: 1020px){
+    .aligner {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+     .aligner{
+         width: 100%;
+     }
+     header{
+         width: 768px;
+         position: fixed;
+         z-index: 101;
+         height: 94px;
+         background-color: #2d303a;
+         color: white;
+     }
+     .header_content{
+         width: 688px;
+     }
+     .phones{
+         width: 768px;
+         height: 451px;
+     }
+     .slide{
+         height: 457px;
+     }
+     #slide-1 .wrapper{
+         width: 768px;
+         height: 457px;
+     }
+     .service-block{
+         height: 674px;
+     }
+     .service_upperpart{
+         padding-top: 7%;
+     }
+     .service-block > .wrapper{
+         width: 688px;
+     }
+     .portfolio{
+         width: 100%;
+         height: 1103px;
+     }
+     .portfolio > .wrapper{
+         width: 688px;
+     }
+    .copyright{
+        display: none;
+    }
+    .person-contacts2{
+        position: absolute;
+        left: 50%;
+        margin-left: -78px;
+        top: 50%;
+        margin-top: -17px;
+    }
+    }
+}
+@media screen and (max-width: 375px){
+
 }
