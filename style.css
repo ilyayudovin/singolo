@@ -71,6 +71,8 @@ header{
 /**/
 
 .section-bottom{
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 6px;
     background-color: #ea676b;
@@ -667,6 +669,35 @@ footer{
     .aligner {
         width: 100%;
     }
+    .aligner > section {
+        width: 100%;
+    }
+    header {
+        width: 1020px;
+    }
+    .phones {
+        height: auto;
+        padding-top: 94px;
+    }
+    .phones > .slide.active {
+        width: 100%;
+        position: relative;
+        height: auto;
+        object-fit: contain;
+    }
+    .left-arrow {
+        top: calc(50% + 32px);
+        left: 30px;
+    }
+    .right-arrow{
+        top: calc(50% + 32px);
+        right: 30px;
+    }
+    .section-bottom {
+        height: 8px;
+        position: absolute;
+        bottom:2px;
+    }
 }
 @media screen and (max-width: 768px){
      .aligner{
@@ -683,10 +714,6 @@ footer{
      .header_content{
          width: 688px;
      }
-     .phones{
-         width: 768px;
-         height: 451px;
-     }
      .slide{
          height: 457px;
      }
@@ -701,7 +728,7 @@ footer{
          padding-top: 7%;
      }
      .service-block > .wrapper{
-         width: 688px;
+         width: 92%;
      }
      .portfolio{
          width: 100%;
