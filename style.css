@@ -756,7 +756,7 @@ footer{
     }
     .aboutus{
         height: auto;
-        padding-bottom: 69px;
+        padding-bottom: 71px;
     }
     .people-info{
         margin-top: 40px;
@@ -776,6 +776,44 @@ footer{
     }
     .person2{
         margin: 0 calc((100% - 86vw)/2);
+    }
+    .wrapper3{
+        padding-top: 32px;
+        width: 93%;
+    }
+    .wrapper3 > .text-section {
+        width: calc(100% - 40px);
+    }
+    .form-and-contacts{
+        margin-top: 25px;
+        width:100% ;
+    }
+    .quote form input{
+        margin-bottom: 12px;
+        width: auto;
+    }
+    .quote form textarea{
+        width: auto;
+        height: 159px;
+    }
+    .contact-info{
+        padding-left: 30px;
+        flex: 0.88;
+    }
+    .contact-info > div{
+        width: 222px;
+    }
+    .contact-info p{
+        padding-top: 5px;
+        margin-bottom: 18px;
+    }
+   .input-section{
+       flex: 1.6;
+   }
+    .quote form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media screen and (max-width: 768px){
