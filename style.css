@@ -745,6 +745,38 @@ footer{
         margin: 10px;
         margin-bottom: 5px;
     }
+    .aboutus > .wrapper2{
+        width: calc(100% - 80px);
+    }
+    .footer-text-section h1{
+        padding-top: 17px;
+    }
+    .footer-text-section p {
+        padding-top: 14px;
+    }
+    .aboutus{
+        height: auto;
+        padding-bottom: 69px;
+    }
+    .people-info{
+        margin-top: 40px;
+    }
+    .people-info .person h2{
+        margin-top: 7px;
+    }
+    .people-info .person p {
+        padding-top: 2px;
+    }
+    .person-contacts {
+        margin-top: 13px;
+    }
+    .person > img{
+        width: 100%;
+        height: auto;
+    }
+    .person2{
+        margin: 0 calc((100% - 86vw)/2);
+    }
 }
 @media screen and (max-width: 768px){
      .aligner{
