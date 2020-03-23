@@ -28,6 +28,22 @@ header{
     text-align: left;
     line-height: 20px;
 }
+.logo-for-burger{
+    position: absolute;
+    z-index: 100;
+     left: 73px;
+    transition-duration: 0.5s;
+    /*transition-delay: 0.2s;*/
+    /*transform: translateX(-160px);*/
+}
+.burger{
+    position: absolute;
+    z-index: 100;
+    left: 20px;
+    top: 26px;
+    display: none;
+    transition-duration: 0.5s;
+}
 .header-bottom{
     width: 100%;
     height: 6px;
@@ -54,7 +70,7 @@ header{
     cursor: pointer;
 }
 .header_content nav ul li a:hover {
-    color: rgb(240,108,100);
+    /*color: rgb(240,108,100);*/
     cursor: pointer;
 }
 
@@ -628,11 +644,11 @@ footer{
     transform: translate(100%, 0);
 }
 .phone-click{
-    width: 216px;
-    height: 457px;
+    width: 163px;
+    height: 346px;
     position: absolute;
-    padding-left: 0px;
-    margin-top: 71px;
+    padding-left: 84px;
+    margin-top: -415px;
 }
 .phone-click2{
     position: absolute;
@@ -642,27 +658,31 @@ footer{
     margin-top: 105px;
 }
 .black-screen{
-    width: 189px;
-    margin-left: 15px;
-    height: 334px;
-    margin-top: 64px;
+    width: 143px;
+    margin-left: 10px;
+    height: 251px;
+    margin-top: 50px;
     background-color: black;
     display: none;
 }
 .black-screen2{
-    position: absolute;
-    height: 189px;
-    width: 334px;
-    margin-left: 60px;
-    margin-top: 14px;
-    background-color: black;
-    display: none;
+position: absolute;
+height: 189px;
+width: 334px;
+margin-left: 60px;
+margin-top: 14px;
+background-color: black;
+display: none;
 }
 .message{
-    padding: 20px;
+padding: 20px;
 }
 .message p {
-    word-break: break-all;
+word-break: break-all;
+}
+.activeham{
+    transform: rotate(90deg);
+    transition-duration: 0.5s;
 }
 /**/
 @media screen and (max-width: 1020px){
@@ -673,7 +693,10 @@ footer{
         width: 100%;
     }
     header {
-        width: 1020px;
+        width: 100%;
+    }
+    .header_content{
+        width: auto;
     }
     .phones {
         height: auto;
@@ -687,11 +710,11 @@ footer{
     }
     .left-arrow {
         top: calc(50% + 32px);
-        left: 30px;
+        left: 4%;
     }
     .right-arrow{
         top: calc(50% + 32px);
-        right: 30px;
+        right: 4%;
     }
     .section-bottom {
         height: 8px;
@@ -779,7 +802,7 @@ footer{
     }
     .wrapper3{
         padding-top: 32px;
-        width: 93%;
+        width: calc(100% - 80px);
     }
     .wrapper3 > .text-section {
         width: calc(100% - 40px);
@@ -797,8 +820,8 @@ footer{
         height: 159px;
     }
     .contact-info{
-        padding-left: 30px;
-        flex: 0.88;
+        padding-left: 25px;
+        flex: 1;
     }
     .contact-info > div{
         width: 222px;
@@ -808,65 +831,143 @@ footer{
         margin-bottom: 18px;
     }
    .input-section{
-       flex: 1.6;
+       flex: 2;
    }
     .quote form{
         width: 100%;
         display: flex;
         flex-direction: column;
     }
+    .quote{
+        height: auto;
+        padding-bottom: 65px;
+    }
+
 }
-@media screen and (max-width: 768px){
-     .aligner{
-         width: 100%;
-     }
-     header{
-         width: 768px;
-         position: fixed;
-         z-index: 101;
-         height: 94px;
-         background-color: #2d303a;
-         color: white;
-     }
-     .header_content{
-         width: 688px;
-     }
-     .slide{
-         height: 457px;
-     }
-     #slide-1 .wrapper{
-         width: 768px;
-         height: 457px;
-     }
-     .service-block{
-         height: 674px;
-     }
-     .service_upperpart{
-         padding-top: 7%;
-     }
-     .service_upperpart p {
-         width: auto;
-     }
-     .service-block > .wrapper{
-         width: 88%;
-         margin: 0 41px;
-     }
-    .portfolio .text-section p{
+@media screen and (max-width: 767px) {
+    .aligner {
+        width: 100%;
+    }
+
+    header {
+        width: 100%;
+        position: fixed;
+        z-index: 101;
+        height: 71px;
+        background-color: #2d303a;
+        color: white;
+    }
+
+    .header_content {
+        text-align: center;
+        padding: 24px 40px;
+    }
+
+    .header_content nav {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        background: #2D303A;
+        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+        width: 278px;
+    }
+
+    .header_content nav ul {
+        position: absolute;
+        top: 231px;
+        margin-left: 70px;
+        width: calc(100% - 70px);
+        text-align: left;
+    }
+
+    .header_content nav ul li {
+        font-weight: 700;
+        font-family: Lato;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 27px;
+        letter-spacing: -0.035em;
+        cursor: pointer;
+        display: block;
+        margin-left: 0;
+    }
+    .header_content ul li:not(:first-child)::before {
+        content: none;
+        position: relative;
+        bottom: 3px;
+        left: -13px;
+        font-weight: 400;
+        font-size: 19px;
+        font-family: Lato, sans-serif;
+        color: rgb(63,67,83);
+    }
+    .logo {
+        padding-top: 2px;
+        font-size: 18px;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header_content nav {
+        display: none;
+    }
+
+    .phones {
+        padding-top: 75px;
+    }
+
+    .slide {
+        height: 457px;
+    }
+
+    #slide-1 .wrapper {
+        width: 768px;
+        height: 457px;
+    }
+
+    .service-block {
+        height: 674px;
+    }
+
+    .service_upperpart {
+        padding-top: 7%;
+    }
+
+    .service_upperpart p {
+        width: auto;
+    }
+
+    .service-block > .wrapper {
+        width: 88%;
+        margin: 0 41px;
+    }
+
+    .portfolio .text-section p {
         word-spacing: -1px;
         margin-top: 17px;
         line-height: 30px;
         width: 665px;
     }
+
     .classified-list {
         margin-top: 11px;
     }
-     .portfolio{
-         width: 100%;
-     }
-    .copyright{
+
+    .portfolio {
+        width: 100%;
+    }
+
+    .copyright {
         display: none;
     }
-    .person-contacts2{
+
+    .person-contacts2 {
         position: absolute;
         left: 50%;
         margin-left: -78px;

@@ -1,11 +1,11 @@
-const Menu = document.getElementById("section-list");
-Menu.addEventListener('click', (event)=>{
-    Menu.querySelectorAll('li').forEach(el => el.classList.remove('active-li'));
-    Menu.querySelectorAll('a').forEach(el => el.classList.remove('active-li'));
-    event.target.classList.add('active-li');
-    Menu.classList.remove('active');
-
-});
+// const Menu = document.getElementById("section-list");
+// Menu.addEventListener('click', (event)=>{
+//     Menu.querySelectorAll('li').forEach(el => el.classList.remove('active-li'));
+//     Menu.querySelectorAll('a').forEach(el => el.classList.remove('active-li'));
+//     event.target.classList.add('active-li');
+//     Menu.classList.remove('active');
+//
+// });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -135,52 +135,71 @@ arrows[1].addEventListener('click',function(){
 
 const phone1 = document.getElementsByClassName('phone-click');
 const phone2 = document.getElementsByClassName('phone-click2');
-phone1[0].addEventListener('click',()=>{
-    //let sreen = document.getElementById('black-sreen');
-    if(document.getElementsByClassName('black-screen')[0].style.display == "none" || document.getElementsByClassName('black-screen')[0].style.display == ''){
-        document.getElementsByClassName('black-screen')[0].style.display = "block";
-        document.getElementsByClassName('black-screen')[1].style.display = "block";
+// phone1[0].addEventListener('click',()=>{
+//     //let sreen = document.getElementById('black-sreen');
+//     if(document.getElementsByClassName('black-screen')[0].style.display == "none" || document.getElementsByClassName('black-screen')[0].style.display == ''){
+//         document.getElementsByClassName('black-screen')[0].style.display = "block";
+//         document.getElementsByClassName('black-screen')[1].style.display = "block";
+//
+//     }
+//     else{
+//         document.getElementsByClassName('black-screen')[0].style.display = "none";
+//         document.getElementsByClassName('black-screen')[1].style.display = "none";
+//
+//     }
+// });
+// phone1[1].addEventListener('click',()=>{
+//     //let sreen = document.getElementById('black-sreen');
+//     if(document.getElementsByClassName('black-screen')[1].style.display == "none" || document.getElementsByClassName('black-screen')[1].style.display == ''){
+//         document.getElementsByClassName('black-screen')[0].style.display = "block";
+//         document.getElementsByClassName('black-screen')[1].style.display = "block";
+//     }
+//     else{
+//         document.getElementsByClassName('black-screen')[0].style.display = "none";
+//         document.getElementsByClassName('black-screen')[1].style.display = "none";
+//     }
+// });
+//
+// phone2[0].addEventListener('click',()=>{
+//     //let sreen = document.getElementById('black-sreen');
+//     if(document.getElementsByClassName('black-screen2')[0].style.display === "none" || document.getElementsByClassName('black-screen2')[0].style.display === ''){
+//         document.getElementsByClassName('black-screen2')[0].style.display = "block";
+//         document.getElementsByClassName('black-screen2')[1].style.display = "block";
+//
+//     }
+//     else{
+//         document.getElementsByClassName('black-screen2')[0].style.display = "none";
+//         document.getElementsByClassName('black-screen2')[1].style.display = "none";
+//
+//     }
+// });
+// phone2[1].addEventListener('click',()=>{
+//     //let sreen = document.getElementById('black-sreen');
+//     if(document.getElementsByClassName('black-screen2')[1].style.display === "none" || document.getElementsByClassName('black-screen2')[1].style.display === ''){
+//         document.getElementsByClassName('black-screen2')[0].style.display = "block";
+//         document.getElementsByClassName('black-screen2')[1].style.display = "block";
+//     }
+//     else{
+//         document.getElementsByClassName('black-screen2')[0].style.display = "none";
+//         document.getElementsByClassName('black-screen2')[1].style.display = "none";
+//     }
+// });
 
+const Burger = document.getElementById('burger');
+Burger.addEventListener('click',(event)=>{
+    if(Burger.classList.contains('activeham')){
+        Burger.classList.remove('activeham');
+        document.getElementById('navigation').style.display="none";
+        document.getElementById('logo').classList.remove('logo-for-burger');
+        document.getElementById('pop-window').style.display="none";
+        document.getElementById('message').style.display="block";
     }
     else{
-        document.getElementsByClassName('black-screen')[0].style.display = "none";
-        document.getElementsByClassName('black-screen')[1].style.display = "none";
+        Burger.classList.add('activeham');
+        document.getElementById('navigation').style.display="block";
+        document.getElementById('logo').classList.add('logo-for-burger');
+        document.getElementById('pop-window').style.display="block";
+        document.getElementById('message').style.display="none";
+    }
 
-    }
-});
-phone1[1].addEventListener('click',()=>{
-    //let sreen = document.getElementById('black-sreen');
-    if(document.getElementsByClassName('black-screen')[1].style.display == "none" || document.getElementsByClassName('black-screen')[1].style.display == ''){
-        document.getElementsByClassName('black-screen')[0].style.display = "block";
-        document.getElementsByClassName('black-screen')[1].style.display = "block";
-    }
-    else{
-        document.getElementsByClassName('black-screen')[0].style.display = "none";
-        document.getElementsByClassName('black-screen')[1].style.display = "none";
-    }
-});
-
-phone2[0].addEventListener('click',()=>{
-    //let sreen = document.getElementById('black-sreen');
-    if(document.getElementsByClassName('black-screen2')[0].style.display === "none" || document.getElementsByClassName('black-screen2')[0].style.display === ''){
-        document.getElementsByClassName('black-screen2')[0].style.display = "block";
-        document.getElementsByClassName('black-screen2')[1].style.display = "block";
-
-    }
-    else{
-        document.getElementsByClassName('black-screen2')[0].style.display = "none";
-        document.getElementsByClassName('black-screen2')[1].style.display = "none";
-
-    }
-});
-phone2[1].addEventListener('click',()=>{
-    //let sreen = document.getElementById('black-sreen');
-    if(document.getElementsByClassName('black-screen2')[1].style.display === "none" || document.getElementsByClassName('black-screen2')[1].style.display === ''){
-        document.getElementsByClassName('black-screen2')[0].style.display = "block";
-        document.getElementsByClassName('black-screen2')[1].style.display = "block";
-    }
-    else{
-        document.getElementsByClassName('black-screen2')[0].style.display = "none";
-        document.getElementsByClassName('black-screen2')[1].style.display = "none";
-    }
-});
+})
