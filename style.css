@@ -625,7 +625,10 @@ footer {
     height: 76px;
     background-color: #2d303a;
 }
-
+.person > img{
+    max-width: 314px;
+    max-height: 314px;
+}
 .person-contacts2 {
     position: absolute;
     top: 22px;
@@ -1162,12 +1165,32 @@ footer {
         top: 50%;
         margin-top: -17px;
     }
-
+    .person2{
+        margin: 0 10px;
+    }
+    .people-info > .person {
+        width: auto;
+    }
 }
 
 @media screen and (min-width: 500px ) and (max-width: 770px) {
     .gallery > * {
         width: auto;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .people-info{
+        flex-direction: column;
+        margin: 0 calc((100% - 314px)/2);
+        margin-top: 25px;
+    }
+    .person2{
+        margin: 0;
+    }
+    .people-info > .person {
+        width: auto;
+        margin-bottom: 33px;
     }
 }
 
@@ -1271,5 +1294,33 @@ footer {
     }
     .portfolio {
         padding-bottom: 50px;
+    }
+    .aboutus > .wrapper2 {
+        width: calc(100% - 60px);
+    }
+    .wrapper2{
+        padding-top: 16px;
+        margin: 0 0 0 30px;
+    }
+    .footer-text-section p{
+        text-align: left;
+        padding-top: 18px;
+        width: calc(100% - 5px);
+    }
+    .people-info{
+        margin-top: 26px;
+    }
+    .people-info > .person {
+        width: auto;
+        margin-bottom: 33px;
+    }
+    .people-info .person h2 {
+        margin-top: 11px;
+    }
+    .person2{
+        margin: 0;
+    }
+    .aboutus{
+        padding-bottom: 14px;
     }
 }
