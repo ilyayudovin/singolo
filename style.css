@@ -1192,6 +1192,17 @@ footer {
         width: auto;
         margin-bottom: 33px;
     }
+    .form-and-contacts{
+        flex-direction: column;
+    }
+    .contact-info{
+        margin-top: 31px;
+        padding-left: 0;
+        width: auto;
+    }
+    .contact-info > div {
+        width: auto;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -1322,5 +1333,42 @@ footer {
     }
     .aboutus{
         padding-bottom: 14px;
+    }
+    .wrapper3{
+        padding-top: 24px;
+        width: auto;
+        margin: 0 31px;
+    }
+    .wrapper3 > .text-section {
+        width: calc(100% - 5px);
+    }
+    .quote .wrapper .text-section p{
+        text-align: left;
+        letter-spacing: 0;
+    }
+    .submitbtn {
+        border: none;
+        width: 100%;
+        line-height: 51px;
+        margin-top: 14px;
+        font-size: 15px;
+        border-radius: 3px;
+    }
+    .form-and-contacts{
+        flex-direction: column;
+    }
+    .contact-info{
+        margin-top: 31px;
+        padding-left: 0;
+        width: auto;
+    }
+    .contact-info > div {
+         width: auto;
+    }
+    .quote{
+        padding-bottom: 36px;
+    }
+    .contacts{
+        margin-bottom: 10px;
     }
 }
