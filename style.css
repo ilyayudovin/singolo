@@ -11,6 +11,7 @@ body{
 .aligner{
     width: 1020px;
     margin: 0 auto;
+    min-width: 320px;
 }
 header{
     width: 1020px;
@@ -35,6 +36,9 @@ header{
     transition-duration: 0.5s;
     /*transition-delay: 0.2s;*/
     /*transform: translateX(-160px);*/
+}
+.nav-for-burger{
+    display:block;
 }
 .burger{
     position: absolute;
@@ -698,6 +702,12 @@ word-break: break-all;
     .header_content{
         width: auto;
     }
+    .header_content nav{
+        display: block;
+    }
+    .pop-window{
+        display: none;
+    }
     .phones {
         height: auto;
         padding-top: 94px;
@@ -932,7 +942,7 @@ word-break: break-all;
     }
 
     .service-block {
-        height: 674px;
+        padding-bottom: 35px;
     }
 
     .service_upperpart {
@@ -977,5 +987,51 @@ word-break: break-all;
 
 }
 @media screen and (max-width: 375px){
+    .phones{
+        padding-top: 71px;
+    }
+    .header-bottom{
+        display: none;
+    }
+    .left-arrow{
+        top: calc(50% + 18px);
+        left: 2.5%;
+    }
+    .right-arrow{
+        top: calc(50% + 21px);
+        right: 2.5%;
+    }
+    .service-block{
+        padding-bottom: 10px;
+    }
+    .service-block > .wrapper{
+        margin: 0 32px;
+        width:auto ;
+    }
+    .service_upperpart{
+        padding-top: 10%;
+        width: calc(100%);
+    }
+    .service_upperpart p{
+        font-size: 18px;
+        line-height: 30px;
+        color: #767e9e;
+        padding-top: 26px;
+        letter-spacing: 0;
+        text-align: left;
+    }
+    .service_lowerpart{
+        margin-top: -6px;
+    }
+    .service:nth-child(-n+3) {
+        margin-bottom: 18px;
+    }
+    .service {
+        margin-bottom: 14px;
+        margin-right: 0;
+    }
+    .footer-bottom{
+        display: none;
+    }
 
 }
