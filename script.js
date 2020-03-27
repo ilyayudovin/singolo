@@ -119,6 +119,8 @@ let slides = document.getElementsByClassName('slide');
 arrows[0].addEventListener('click',function (event) {
     let activeSlide = document.getElementsByClassName('active');
     if (arrows[0].id === 'previous') {
+        document.getElementById('black-screen').style.display='none';
+        document.getElementById('black-screen2').style.display='none';
         slides[0].parentNode.insertBefore(slides[3],slides[0]);
         activeSlide[0].classList.remove('active');
         slides[1].classList.add('active');
@@ -127,6 +129,16 @@ arrows[0].addEventListener('click',function (event) {
 arrows[1].addEventListener('click',function(){
     let activeSlide = document.getElementsByClassName('active');
     if(arrows[1].id === 'next'){
+        document.getElementById('black-screen').style.display='none';
+        document.getElementById('black-screen2').style.display='none';
+        if(document.getElementById('phone-click').style.display==="none"){
+            document.getElementById('phone-click').style.display='block';
+            document.getElementById('phone-click2').style.display='block';
+        }
+        else{
+            document.getElementById('phone-click').style.display='none';
+            document.getElementById('phone-click2').style.display='none';
+        }
         slides[3].parentNode.insertBefore(slides[0],null);
         activeSlide[0].classList.remove('active');
         slides[1].classList.add('active');
@@ -135,55 +147,24 @@ arrows[1].addEventListener('click',function(){
 
 const phone1 = document.getElementsByClassName('phone-click');
 const phone2 = document.getElementsByClassName('phone-click2');
-// phone1[0].addEventListener('click',()=>{
-//     //let sreen = document.getElementById('black-sreen');
-//     if(document.getElementsByClassName('black-screen')[0].style.display == "none" || document.getElementsByClassName('black-screen')[0].style.display == ''){
-//         document.getElementsByClassName('black-screen')[0].style.display = "block";
-//         document.getElementsByClassName('black-screen')[1].style.display = "block";
-//
-//     }
-//     else{
-//         document.getElementsByClassName('black-screen')[0].style.display = "none";
-//         document.getElementsByClassName('black-screen')[1].style.display = "none";
-//
-//     }
-// });
-// phone1[1].addEventListener('click',()=>{
-//     //let sreen = document.getElementById('black-sreen');
-//     if(document.getElementsByClassName('black-screen')[1].style.display == "none" || document.getElementsByClassName('black-screen')[1].style.display == ''){
-//         document.getElementsByClassName('black-screen')[0].style.display = "block";
-//         document.getElementsByClassName('black-screen')[1].style.display = "block";
-//     }
-//     else{
-//         document.getElementsByClassName('black-screen')[0].style.display = "none";
-//         document.getElementsByClassName('black-screen')[1].style.display = "none";
-//     }
-// });
-//
-// phone2[0].addEventListener('click',()=>{
-//     //let sreen = document.getElementById('black-sreen');
-//     if(document.getElementsByClassName('black-screen2')[0].style.display === "none" || document.getElementsByClassName('black-screen2')[0].style.display === ''){
-//         document.getElementsByClassName('black-screen2')[0].style.display = "block";
-//         document.getElementsByClassName('black-screen2')[1].style.display = "block";
-//
-//     }
-//     else{
-//         document.getElementsByClassName('black-screen2')[0].style.display = "none";
-//         document.getElementsByClassName('black-screen2')[1].style.display = "none";
-//
-//     }
-// });
-// phone2[1].addEventListener('click',()=>{
-//     //let sreen = document.getElementById('black-sreen');
-//     if(document.getElementsByClassName('black-screen2')[1].style.display === "none" || document.getElementsByClassName('black-screen2')[1].style.display === ''){
-//         document.getElementsByClassName('black-screen2')[0].style.display = "block";
-//         document.getElementsByClassName('black-screen2')[1].style.display = "block";
-//     }
-//     else{
-//         document.getElementsByClassName('black-screen2')[0].style.display = "none";
-//         document.getElementsByClassName('black-screen2')[1].style.display = "none";
-//     }
-// });
+phone1[0].addEventListener('click',()=>{
+    //let sreen = document.getElementById('black-sreen');
+    if(document.getElementsByClassName('black-screen')[0].style.display == "none" || document.getElementsByClassName('black-screen')[0].style.display == ''){
+        document.getElementsByClassName('black-screen')[0].style.display = "block";
+    }
+    else{
+        document.getElementsByClassName('black-screen')[0].style.display = "none";
+    }
+});
+phone2[0].addEventListener('click',()=>{
+    if(document.getElementsByClassName('black-screen2')[0].style.display === "none" || document.getElementsByClassName('black-screen2')[0].style.display === ''){
+        document.getElementsByClassName('black-screen2')[0].style.display = "block";
+    }
+    else{
+        document.getElementsByClassName('black-screen2')[0].style.display = "none";
+    }
+});
+
 
 const Burger = document.getElementById('burger');
 Burger.addEventListener('click',(event)=>{
